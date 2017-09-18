@@ -1,4 +1,3 @@
-
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE generatorConfiguration
         PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
@@ -10,7 +9,7 @@
     出现错误：Caused by: java.lang.ClassNotFoundException: com.mysql.jdbc.Driver
     解决办法：将本地的MAVEN仓库中的mysql驱动引入进来
 -->
-<classPathEntry location="C:\Users\Administrator\.m2\repository\mysql\mysql-connector-java\5.1.6\mysql-connector-java-5.1.6.jar"/>
+<classPathEntry location="C:\Users\xdCao\.m2\repository\mysql\mysql-connector-java\5.1.41\mysql-connector-java-5.1.41.jar"/>
 
 <context id="mysqlgenerator" targetRuntime="MyBatis3">
     <!--不生成注释-->
