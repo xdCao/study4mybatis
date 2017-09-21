@@ -10,7 +10,22 @@
         <result property="note" column="note"/>
         <association property="card" column="id" select="dao.CardMapper.getCardByStudentId"/>
         <collection property="goals" column="id" select="dao.GoalMapper.getGoalsByStudentId"/>
+
+        <discriminator javaType="int" column="sex">
+            <case value="1" resultMap="maleStudentMap"></case>
+            <case value="2" resultMap="femaleStudentMap"></case>
+        </discriminator>
+
     </resultMap>
+
+    <resultMap id="maleStudentMap" type="domain.MaleStudent" extends="studentMap">
+        <collection property="maleHealthList" select="dao.MaleHealthMapper.getMaleHealthsByStuId" column="id"/>
+    </resultMap>
+
+    <resultMap id="femaleStudentMap" type="domain.FemaleStudent" extends="studentMap">
+        <collection property="femaleHealthList" select="dao.FemaleHealthMapper.getFemaleHealthsByStuId" column="id"/>
+    </resultMap>
+
 
     <select id="getStudent" parameterType="long" resultMap="studentMap">
         SELECT * from student where id=#{id}

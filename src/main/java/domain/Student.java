@@ -5,7 +5,7 @@ import java.util.List;
 public class Student {
 
     private Long id;
-    private String sex;
+    private int sex;
     private String name;
     private Card card;
     private String note;
@@ -27,11 +27,11 @@ public class Student {
         this.id = id;
     }
 
-    public String getSex() {
+    public int getSex() {
         return sex;
     }
 
-    public void setSex(String sex) {
+    public void setSex(int sex) {
         this.sex = sex;
     }
 
