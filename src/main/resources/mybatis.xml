@@ -24,9 +24,7 @@
     </environments>
 
     <mappers>
-        <mapper resource="dao/role.xml"></mapper>
-        <mapper resource="dao/CardMapper.xml"></mapper>
-        <mapper resource="dao/StudentMapper.xml"></mapper>
+        <package name="dao"/>
     </mappers>
 
 </configuration>

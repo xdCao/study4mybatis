@@ -1,5 +1,7 @@
 package domain;
 
+import java.util.List;
+
 public class Student {
 
     private Long id;
@@ -7,6 +9,15 @@ public class Student {
     private String name;
     private Card card;
     private String note;
+    private List<Goal> goals;
+
+    public List<Goal> getGoals() {
+        return goals;
+    }
+
+    public void setGoals(List<Goal> goals) {
+        this.goals = goals;
+    }
 
     public Long getId() {
         return id;
