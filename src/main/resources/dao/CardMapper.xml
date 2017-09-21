@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="dao.CardMapper">
+
+    <resultMap id="cardMap" type="domain.Card">
+        <id property="id" column="id"/>
+        <result property="studentId" column="student_id"/>
+        <result property="birthPlace" column="birth_place"/>
+        <result property="created" column="created"/>
+        <result property="finished" column="finished"/>
+        <result property="note" column="note"/>
+    </resultMap>
+
+    <select id="getCardByStudentId" parameterType="long" resultType="domain.Card" resultMap="cardMap">
+        SELECT * FROM card WHERE student_id=#{studentId}
+    </select>
+</mapper>
