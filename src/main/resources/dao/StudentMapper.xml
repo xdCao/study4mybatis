@@ -8,8 +8,8 @@
         <result property="name" column="name"/>
         <result property="sex" column="sex"/>
         <result property="note" column="note"/>
-        <association property="card" column="id" select="dao.CardMapper.getCardByStudentId"/>
-        <collection property="goals" column="id" select="dao.GoalMapper.getGoalsByStudentId"/>
+        <association property="card" column="id" select="dao.CardMapper.getCardByStudentId" fetchType="lazy"/>
+        <collection property="goals" column="id" select="dao.GoalMapper.getGoalsByStudentId" fetchType="eager"/>
 
         <discriminator javaType="int" column="sex">
             <case value="1" resultMap="maleStudentMap"></case>
