@@ -1,8 +1,9 @@
 package domain;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class Health {
+public class Health implements Serializable{
 
     private Long id;
     private Long studentId;

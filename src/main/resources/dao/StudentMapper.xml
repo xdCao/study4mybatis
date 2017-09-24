@@ -3,6 +3,8 @@
 
 <mapper namespace="dao.StudentMapper">
 
+    <cache/>
+
     <resultMap id="studentMap" type="domain.Student">
         <id property="id" column="id"/>
         <result property="name" column="name"/>

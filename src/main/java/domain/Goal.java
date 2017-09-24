@@ -1,8 +1,9 @@
 package domain;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 
-public class Goal {
+public class Goal implements Serializable{
 
     private Long id;
     private Long studentId;

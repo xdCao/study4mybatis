@@ -1,8 +1,9 @@
 package domain;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class Card {
+public class Card implements Serializable{
 
     private Long id;
     private Long studentId;
